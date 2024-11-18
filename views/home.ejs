@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Carros</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        label {
+            display: block;
+            margin: 15px 0 5px;
+        }
+        
+        select, input[type="date"],input[type="text"],input[type="email"], button {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva de Carros</h1>
+        <form id="reservation-form" method="POST" action="/guardar">
+            
+            <label for="car-type">Tipo de Carro:</label>
+            <select id="car-type" name="cartype" required>
+                <option value="">Selecione um carro</option>
+                <option value="Ford Ka">Ford Ka</option>
+                <option value="HB20">HB20</option>
+                <option value="ONIX Turbo">ONIX Turbo</option>
+                <option value="Luxuoso">Luxuoso</option>
+            </select>
+            <label for="motorista">Nome:</label>
+            <input type="text" name="motorista" placeholder="Nome do Motorista:">
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Coloque seu email:">
+
+            <label for="startdate">Data de Início:</label>
+            <input type="date" id="startdate" name="startdate" required>
+
+            <label for="enddate">Data de Término:</label>
+            <input type="date" id="enddate" name="enddate" required>
+
+            <button type="submit">Reservar Carro</button>
+        </form>
+    </div>
+</body>
+</html>
