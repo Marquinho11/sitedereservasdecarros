@@ -1,0 +1,14 @@
+//para instalar o node no servidor
+sudo apt install nodejs
+
+//para instalar o mysql
+sudo apt install mysql-server
+
+//para instalar pm2 que deixa o app rodando
+sudo npm install -g pm2
+
+//para rodar o app
+pm2 start app.js
+
+//para mudar o acesso no mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Marquinhos12@';
